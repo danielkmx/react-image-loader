@@ -4,6 +4,7 @@ import ImageLoader from './ImageLoader';
 import * as serviceWorker from './serviceWorker';
 import imageSmall from './output.svg';
 import imageLarge from './big_img.jpeg';
+/* import imageSmall from './img_small2.jpeg'; */
 
 
 

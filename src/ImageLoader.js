@@ -23,12 +23,38 @@ const ImageContainer = styled.div`
   }
 `;
 
-const Img = ({ image_large, image_small, alt, loaded, ...props }) =>
-  loaded ? (
-    <img src={image_large} alt={alt} {...props} />
-  ) : (
-    <img className="blurry" src={image_small} alt={`img_small`} />
-  );
+const Img = ({
+  image_large,
+  image_small,
+  alt,
+  loaded,
+  setLoaded,
+  onLoad,
+  callback,
+  ...props
+}) => (
+  <React.Fragment>
+    <img
+      style={loaded ? undefined : { display: "none" }}
+      src={image_large}
+      alt={alt}
+      {...props}
+      data-testid="image-large"
+      onLoad={async e => {
+        setLoaded(true);
+        onLoad && onLoad(e);
+      }}
+    />
+    {!loaded && (
+      <img
+        src={image_small}
+        alt="img_small"
+        className=""
+        data-testid="image-small"
+      />
+    )}
+  </React.Fragment>
+);
 
 const ImageWrapper = props =>
   props.render ? (
@@ -42,13 +68,6 @@ const ImageWrapper = props =>
 function ImageLoader(props) {
   const [loaded, setLoaded] = useState(false);
   const { image_large, image_small, width, height } = props;
-  useEffect(() => {
-    const large_img = new Image();
-    large_img.src = image_large;
-    large_img.onload = () => {
-      setLoaded(true);
-    };
-  });
   return (
     <div>
       <ImageWrapper
@@ -58,6 +77,7 @@ function ImageLoader(props) {
         image_large={image_large}
         image_small={image_small}
         loaded={loaded}
+        setLoaded={setLoaded}
       />
     </div>
   );
