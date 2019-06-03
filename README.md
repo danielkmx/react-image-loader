@@ -1,5 +1,6 @@
 # react-image-loader
 Component for progressive image loading
+<br>
 ![](video_libonlinevideocutterc.gif)
 
 ## Usage
@@ -17,7 +18,7 @@ image_small={'https://picsum.photos/200/113/?image=10'} />
 | Property   | Type      | Required | Description                                                                                                                                                                                                                              |
 | :--------- | :-------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `image_large`      | string    | yes      | Original image URL                                                                                                                                                                                                                                |
-| `image_small`      | string    | yes      | Placeholder to display before original image is loaded                                                                                                                                                                                                                               |
+| `image_small`      | string    | yes      | Placeholder to display before original image is loaded                                                                                                                                                                                                                               
 
 | `width`    | number    | yes      | Image width                                                                                                                                                                                                                              |
 | `height`   | number    | yes      | Image height                                                                                                                                                                                                                             |
