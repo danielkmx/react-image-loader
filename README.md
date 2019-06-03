@@ -1,6 +1,6 @@
 # react-image-loader
 Component for progressive image loading
-
+![](video_libonlinevideocutterc.gif)
 
 ## Usage
 ```javascript
