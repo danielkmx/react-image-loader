@@ -49,7 +49,7 @@ const Img = ({
       <img
         src={image_small}
         alt="img_small"
-        className=""
+        className="blurry"
         data-testid="image-small"
       />
     )}
