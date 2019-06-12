@@ -31,20 +31,23 @@ const Img = ({
   setLoaded,
   onLoad,
   callback,
+  slowCon,
   ...props
 }) => (
   <React.Fragment>
-    <img
-      style={loaded ? undefined : { display: "none" }}
-      src={image_large}
-      alt={alt}
-      {...props}
-      data-testid="image-large"
-      onLoad={async e => {
-        setLoaded(true);
-        onLoad && onLoad(e);
-      }}
-    />
+    {slowCon && (
+      <img
+        style={loaded ? undefined : { display: "none" }}
+        src={image_large}
+        alt={alt}
+        {...props}
+        data-testid="image-large"
+        onLoad={async e => {
+          setLoaded(true);
+          onLoad && onLoad(e);
+        }}
+      />
+    )}
     {!loaded && (
       <img
         src={image_small}
@@ -64,13 +67,20 @@ const ImageWrapper = props =>
   ) : (
     <ImageContainer />
   );
-
 function ImageLoader(props) {
+  const [slowCon, setSlowCon] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  const { image_large, image_small, width, height } = props;
+ 
+  const { image_large, image_small, width, height ,threshold} = props;
+  useEffect(() => {
+    setTimeout(function() {
+      setSlowCon(true);
+    }, threshold);
+  });
   return (
     <div>
       <ImageWrapper
+        slowCon={slowCon}
         width={width}
         height={height}
         render={true}

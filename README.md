@@ -21,6 +21,7 @@ image_small={'https://picsum.photos/200/113/?image=10'} />
 | `image_small`       | number    | yes      |  Placeholder to display before original image is loaded. |
 | `width`    | number    | yes      | Image width                                                                                                                                                                                                                              |
 | `height`   | number    | yes      | Image height                                                                                                                                                                                                                             |
+| `threshold`   | number    | yes      | Tempo máximo em segundos para determinar se a internet é lenta                                                                                                                                                                                                                           |
 
 
 ---

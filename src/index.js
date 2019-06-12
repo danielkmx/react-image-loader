@@ -14,11 +14,11 @@ import emdiaMin from './emdia_min.png';
 
 ReactDOM.render(
 <div>
-<ImageLoader width={'500'} height={'320'}  image_large={'https://picsum.photos/1920/1080/?image=1'} image_small={'https://picsum.photos/200/113/?image=1'} />
-<ImageLoader width={'500'} height={'320'}  image_large={'https://picsum.photos/1920/1080/?image=2'} image_small={'https://picsum.photos/200/113/?image=2'} />
-<ImageLoader width={'500'} height={'320'}  image_large={'https://picsum.photos/1920/1080/?image=3'} image_small={'https://picsum.photos/200/113/?image=3'} />
-<ImageLoader width={'500'} height={'320'}  image_large={'https://picsum.photos/1920/1080/?image=4'} image_small={'https://picsum.photos/200/113/?image=4'} /> 
-<ImageLoader width={'500'} height={'320'}  image_large={'https://picsum.photos/1920/1080/?image=10'} image_small={'https://picsum.photos/200/113/?image=10'} /> 
+<ImageLoader width={'500'} threshold={'5000'} height={'320'}  image_large={'https://picsum.photos/1920/1080/?image=1'} image_small={'https://picsum.photos/200/113/?image=1'} />
+<ImageLoader width={'500'} threshold={'5000'} height={'320'}  image_large={'https://picsum.photos/1920/1080/?image=2'} image_small={'https://picsum.photos/200/113/?image=2'} />
+<ImageLoader width={'500'} threshold={'5000'} height={'320'}  image_large={'https://picsum.photos/1920/1080/?image=3'} image_small={'https://picsum.photos/200/113/?image=3'} />
+<ImageLoader width={'500'} threshold={'5000'} height={'320'}  image_large={'https://picsum.photos/1920/1080/?image=4'} image_small={'https://picsum.photos/200/113/?image=4'} /> 
+<ImageLoader width={'500'} threshold={'5000'} height={'320'}  image_large={'https://picsum.photos/1920/1080/?image=10'} image_small={'https://picsum.photos/200/113/?image=10'} /> 
 
 </div>
 
